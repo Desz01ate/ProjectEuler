@@ -1,1 +1,1 @@
-Repository for Project Euler solving in C# (https://projecteuler.net)
+Repository for Project Euler solved in C# (https://projecteuler.net)
