@@ -1,0 +1,6 @@
+C:\Users\TYCHE\Documents\ReactNative\WS\ProjectEuler\ProjectEuler\bin\Debug\ProjectEuler.exe.config
+C:\Users\TYCHE\Documents\ReactNative\WS\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.csprojResolveAssemblyReference.cache
+C:\Users\TYCHE\Documents\ReactNative\WS\ProjectEuler\ProjectEuler\bin\Debug\ProjectEuler.exe
+C:\Users\TYCHE\Documents\ReactNative\WS\ProjectEuler\ProjectEuler\bin\Debug\ProjectEuler.pdb
+C:\Users\TYCHE\Documents\ReactNative\WS\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.exe
+C:\Users\TYCHE\Documents\ReactNative\WS\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.pdb
