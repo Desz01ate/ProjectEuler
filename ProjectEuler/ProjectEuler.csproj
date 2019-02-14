@@ -44,10 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Files\Problem1.cs" />
+    <Compile Include="Files\Problem10.cs" />
     <Compile Include="Files\Problem2.cs" />
     <Compile Include="Files\Problem3.cs" />
     <Compile Include="Files\Problem4.cs" />
     <Compile Include="Files\Problem5.cs" />
+    <Compile Include="Files\Problem6.cs" />
+    <Compile Include="Files\Problem7.cs" />
+    <Compile Include="Files\Problem8.cs" />
+    <Compile Include="Files\Problem9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

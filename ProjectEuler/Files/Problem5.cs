@@ -11,10 +11,9 @@ namespace ProjectEuler.Files
         public static void Solve()
         {
             var guessValue = 2520;
-            var answer = -1;
-            while (answer == -1)
+            var flag = false;
+            while (!flag)
             {
-                var flag = false;
                 for (var i = 1; i < 21; i++)
                 {
                     if (guessValue % i != 0)
@@ -22,10 +21,7 @@ namespace ProjectEuler.Files
                         flag = false;
                         break;
                     }
-                    else
-                    {
-                        flag = true;
-                    }
+                    else flag = true;
                 }
                 if (flag)
                 {
