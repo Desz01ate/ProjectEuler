@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler.Files
 {
-    class Problem9
+    class Problem9 : IProblem
     {
-        public static void Solve()
+        public object Answer { get; private set; }
+
+        public object Solve()
         {
             var goal = 1000;
             var answer = -1;
-            var a = 0;
-            var b = 0;
-            var c = 0;
-            for (a = 1; a < goal; a++)
+            for (var a = 1; a < goal; a++)
             {
+                int b;
                 for (b = a; b < goal; b++)
                 {
-                    c = goal - a - b;
+                    int c = goal - a - b;
                     if (!(a < b) || !(b < c)) continue;
                     if ((a * a) + (b * b) == (c * c))
                     {
@@ -29,7 +30,9 @@ namespace ProjectEuler.Files
                 }
                 if (answer != -1) break;
             }
-            Console.WriteLine($@"{answer}");
+            Answer = answer;
+            return Answer;
+
         }
     }
 }

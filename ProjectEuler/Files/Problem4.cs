@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace ProjectEuler.Files
         public int right { get; set; }
         public int value { get; set; }
     }
-    class Problem4
+    class Problem4 : IProblem
     {
-        public static void Solve()
+        public object Answer { get; private set; }
+
+        public object Solve()
         {
             var dataset = new List<PalindromeMaker>();
             for (var i = 100; i < 999; i++)
@@ -49,8 +52,10 @@ namespace ProjectEuler.Files
                 }
             }
             var ordered = dataset.OrderBy(x => x.value).Last();
-            Console.WriteLine($@"{ordered.left} x {ordered.right} = {ordered.value}");
-            Console.WriteLine("done");
+            //Answer = $@"{ordered.left} x {ordered.right} = {ordered.value}";
+            Answer = ordered.value;
+            return Answer;
+
         }
     }
 }

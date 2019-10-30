@@ -9,9 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjectEuler</RootNamespace>
     <AssemblyName>ProjectEuler</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,9 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructure\BinaryTree.cs" />
     <Compile Include="Files\Problem1.cs" />
     <Compile Include="Files\Problem10.cs" />
+    <Compile Include="Files\Problem11.cs" />
+    <Compile Include="Files\Problem12.cs" />
+    <Compile Include="Files\Problem13.cs" />
+    <Compile Include="Files\Problem14.cs" />
+    <Compile Include="Files\Problem15.cs" />
+    <Compile Include="Files\Problem16.cs" />
+    <Compile Include="Files\Problem17.cs" />
+    <Compile Include="Files\Problem18.cs" />
+    <Compile Include="Files\Problem19.cs" />
     <Compile Include="Files\Problem2.cs" />
+    <Compile Include="Files\Problem20.cs" />
     <Compile Include="Files\Problem3.cs" />
     <Compile Include="Files\Problem4.cs" />
     <Compile Include="Files\Problem5.cs" />
@@ -53,6 +67,7 @@
     <Compile Include="Files\Problem7.cs" />
     <Compile Include="Files\Problem8.cs" />
     <Compile Include="Files\Problem9.cs" />
+    <Compile Include="Interfaces\IProblem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

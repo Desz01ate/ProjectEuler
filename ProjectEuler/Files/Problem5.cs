@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler.Files
 {
-    class Problem5
+    class Problem5 : IProblem
     {
-        public static void Solve()
+        public object Answer { get; private set; }
+
+        public object Solve()
         {
             var guessValue = 2520;
             var flag = false;
@@ -25,11 +28,12 @@ namespace ProjectEuler.Files
                 }
                 if (flag)
                 {
-                    Console.WriteLine(guessValue);
-                    return;
+                    Answer = guessValue;
+                    return Answer;
                 }
                 guessValue++;
             }
+            throw new Exception("Can not find suitable answer.");
         }
     }
 }

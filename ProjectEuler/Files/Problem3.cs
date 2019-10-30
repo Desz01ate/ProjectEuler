@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler.Files
 {
-    class Problem3
+    class Problem3 : IProblem
     {
-        public static void Solve()
+        public object Answer { get; private set; }
+
+        public object Solve()
         {
             var n = 600851475143;
             var primeFactors = new List<long>();
@@ -24,7 +27,9 @@ namespace ProjectEuler.Files
                 else prime++;
             }
             primeFactors.Add(n);
-            Console.WriteLine(primeFactors.Max());
+            Answer = primeFactors.Max();
+            return Answer;
+
         }
     }
 }

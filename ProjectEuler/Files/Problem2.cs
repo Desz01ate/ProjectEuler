@@ -1,12 +1,14 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ProjectEuler.Files
 {
-    static class Problem2
+    class Problem2 : IProblem
     {
-        public static void Solve()
+        public object Answer { get; private set; }
+        public object Solve()
         {
             long f1 = 1;
             long f2 = 1;
@@ -20,8 +22,8 @@ namespace ProjectEuler.Files
                 f2 = f1;
                 f1 = result;
             }
-            //long sum = even.Sum();
-            Console.WriteLine(sum);
+            Answer = sum;
+            return Answer;
         }
     }
 }

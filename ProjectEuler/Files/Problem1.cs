@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler.Files
 {
-    class Problem1
+    class Problem1 : IProblem
     {
-        public static void Solve()
+        public object Answer { get; private set; }
+
+        public object Solve()
         {
             var rules = new[] { 3, 5 };
             var lowerbound = 1;
@@ -22,7 +25,8 @@ namespace ProjectEuler.Files
                 }
                 return false;
             }).Sum();
-            Console.WriteLine(multiplies);
+            Answer = multiplies;
+            return Answer;
         }
     }
 }

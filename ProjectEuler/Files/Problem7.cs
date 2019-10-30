@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler.Files
 {
-    class Problem7
+    class Problem7 : IProblem
     {
-        private static bool PrimeCheck(int n)
+        public object Answer { get; private set; }
+
+        private bool PrimeCheck(int n)
         {
             if (n <= 1 || n == 2 || n % 2 == 0) return false;
             var primeTest = 3;
@@ -19,7 +22,7 @@ namespace ProjectEuler.Files
             }
             return true;
         }
-        public static void Solve()
+        public object Solve()
         {
             var prime = 1;
             var n = 1;
@@ -29,7 +32,8 @@ namespace ProjectEuler.Files
                 if (PrimeCheck(n))
                     prime++;
             }
-            Console.WriteLine(n);
+            Answer = n;
+            return Answer;
         }
     }
 }
